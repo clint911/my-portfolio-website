@@ -35,6 +35,7 @@ function Contact() {
                />
                <button
                   type="button"
+                  onClick={handleSubmit}
                   className="text-center inline-block px-8 py-3 w-max text-base font-medium rounded-md text-white bg-gradient-to-r from-yellow-500 to-pink-500 drop-shadow-md hover:stroke-white"
                >
                   Work With Me
