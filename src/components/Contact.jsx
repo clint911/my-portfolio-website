@@ -1,13 +1,17 @@
 import React from 'react';
 import Title from './Title';
+import { useForm, ValidationError } from '@formspree/react';
 
 function Contact() {
+   const [state, handleSubmit] = useForm("xjvdayna");
+   if (state.succeeded) {
+       return <p>Thanks for sending the email!</p>;
+   }
    return (
       <div className="flex flex-col mb-10 mx-auto">
          <div className="flex justify-center items-center">
             <form
-               action="https://getform.io/f/78b80cde-ca10-4192-b3ea-3e79cdfd0bc1"
-               method="POST"
+               onSubmit={handleSubmit}
                className="flex flex-col w-full md:w-7/12"
             >
                <Title>Contact</Title>
